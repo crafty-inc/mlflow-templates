@@ -1,0 +1,12 @@
+name: call-mechanism
+
+docker_env:
+  image:  mechanism-service
+
+entry_points:
+  main:
+    parameters:
+      mechanism: string
+      query: string
+      user: string
+    command: "--mechanism={mechanism} --user={user} --query={query}"
